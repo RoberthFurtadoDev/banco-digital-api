@@ -54,17 +54,17 @@ API REST completa para gerenciamento de banco digital, desenvolvida com **Spring
 ## 🏗️ Arquitetura
 
 com.bancodigital
-├── config # Configurações (Security, JWT, CORS, Swagger)
-├── controller # Endpoints REST
+├── config (Security, JWT, CORS, Swagger)
+├── controller 
 ├── dto
-│ ├── request # DTOs de entrada
-│ └── response # DTOs de saída
-├── exception # Tratamento de exceções
-├── model # Entidades JPA
-│ └── enums # Enumerações
-├── repository # Acesso a dados
-└── service # Lógica de negócio
-└── impl # Implementações
+│ ├── request 
+│ └── response 
+├── exception 
+├── model
+│ └── enums
+├── repository
+└── service 
+└── impl
 
 text
 
@@ -80,29 +80,22 @@ text
 ### 1. Clone o repositório
 git clone https://github.com/seu-usuario/banco-digital-api.git
 cd banco-digital-api
-
-text
+---
 
 ### 2. Configure o banco de dados
 Crie o banco no PostgreSQL:
 CREATE DATABASE banco_digital;
-
-text
-
+---
 ### 3. Configure as credenciais
 Edite o arquivo `src/main/resources/application-dev.properties`:
 spring.datasource.username=postgres
 spring.datasource.password=SUA_SENHA_AQUI
-
-text
-
+---
 ### 4. Execute a aplicação
 
 **Pelo Maven:**
 mvn spring-boot:run
-
-text
-
+---
 **Pelo IntelliJ:**
 - Clique com botão direito em `BancoDigitalApiApplication.java`
 - Selecione **Run 'BancoDigitalApiApplication'**
@@ -115,8 +108,6 @@ Após executar a aplicação, acesse a documentação interativa:
 
 http://localhost:8080/swagger-ui.html
 
-text
-
 A documentação Swagger permite:
 - Visualizar todos os endpoints
 - Testar as APIs diretamente pelo navegador
@@ -128,19 +119,16 @@ A documentação Swagger permite:
 **Todos os testes:**
 mvn test
 
-text
-
 **Com relatório de cobertura:**
 mvn clean test
 
-text
 
 ## 🔐 Como Usar (Passo a Passo)
 
 ### 1. Criar um novo usuário
 POST /api/users
 Content-Type: application/json
-
+```json
 {
 "nome": "João Silva",
 "cpf": "12345678901",
@@ -148,10 +136,9 @@ Content-Type: application/json
 "senha": "senha123",
 "telefone": "11987654321"
 }
-
-text
-
+```
 **Resposta (201 Created):**
+```json
 {
 "id": 1,
 "nome": "João Silva",
@@ -160,21 +147,18 @@ text
 "telefone": "11987654321",
 "createdAt": "2025-10-06T19:30:00"
 }
-
-text
-
+```
 ### 2. Fazer login
 POST /api/auth/login
 Content-Type: application/json
-
+```json
 {
 "email": "joao@email.com",
 "senha": "senha123"
 }
-
-text
-
+```
 **Resposta (200 OK):**
+```json
 {
 "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FvQGVtYWlsLmNvbSIsImlhdCI6MTY5NjYxMjgwMCwiZXhwIjoxNjk2Njk5MjAwfQ.abc123...",
 "tipo": "Bearer",
@@ -183,24 +167,21 @@ text
 "email": "joao@email.com",
 "role": "USER"
 }
-
-text
-
+```
 ### 3. Criar uma conta bancária
 **⚠️ Adicione o token JWT no header:**
 POST /api/accounts
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...
 Content-Type: application/json
-
+```json
 {
 "numeroConta": "123456",
 "agencia": "0001",
 "userId": 1
 }
-
-text
-
+```
 **Resposta (201 Created):**
+```json
 {
 "id": 1,
 "numeroConta": "123456",
@@ -210,57 +191,47 @@ text
 "nomeUsuario": "João Silva",
 "createdAt": "2025-10-06T19:35:00"
 }
-
-text
-
+```
 ### 4. Realizar um depósito
 POST /api/transactions
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...
 Content-Type: application/json
-
+```json
 {
 "tipo": "DEPOSITO",
 "valor": 1000.00,
 "descricao": "Depósito inicial",
 "accountId": 1
 }
-
-text
-
+```
 ### 5. Realizar um saque
 POST /api/transactions
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...
 Content-Type: application/json
-
+```json
 {
 "tipo": "SAQUE",
 "valor": 200.00,
 "descricao": "Saque no caixa eletrônico",
 "accountId": 1
 }
-
-text
-
+```
 ### 6. Fazer uma transferência
 POST /api/transactions
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...
 Content-Type: application/json
-
-{
+```json
 "tipo": "TRANSFERENCIA",
 "valor": 500.00,
 "descricao": "Transferência para amigo",
 "accountId": 1,
 "accountDestinoId": 2
 }
-
-text
+```
 
 ### 7. Consultar extrato
 GET /api/transactions/account/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...
-
-text
 
 ## 🎯 Princípios e Boas Práticas Aplicadas
 
@@ -299,12 +270,8 @@ text
 mvn clean package
 docker build -t banco-digital-api .
 
-text
-
 ### Executar com Docker Compose:
 docker-compose up -d
-
-text
 
 ## 📝 Estrutura do Banco de Dados
 
@@ -363,11 +330,9 @@ text
 
 ## 👨‍💻 Autor
 
-**Seu Nome**
-- LinkedIn: [seu-linkedin](https://linkedin.com/in/seu-perfil)
-- GitHub: [seu-github](https://github.com/seu-usuario)
-- Email: seu-email@example.com
-- Portfolio: [seu-portfolio.com](https://seu-portfolio.com)
+**Roberth Furtado**
+- LinkedIn: [Roberth Furtado](https://www.linkedin.com/in/roberthfurtado/)
+
 
 ## 📄 Licença
 
