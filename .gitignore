@@ -1,0 +1,45 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# VS Code
+.vscode/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# Logs
+*.log
+logs/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos sensíveis
+application-prod.properties
+.env
+
+# Banco H2
+*.db
+*.mv.db
+*.trace.db
