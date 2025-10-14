@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
-import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -26,12 +25,6 @@ import org.springframework.context.annotation.Configuration;
                         url = "https://www.apache.org/licenses/LICENSE-2.0"
                 )
         ),
-        servers = {
-                @Server(
-                        description = "Servidor Local",
-                        url = "http://localhost:8080"
-                )
-        },
         security = @SecurityRequirement(name = "bearerAuth")
 )
 @SecurityScheme(

@@ -21,13 +21,13 @@ API REST completa para gerenciamento de banco digital, desenvolvida com **Spring
 
 ## 📋 Funcionalidades
 
-### Autenticação
+## Autenticação
 - ✅ Registro de usuários
 - ✅ Login com JWT
 - ✅ Autenticação stateless (sem sessão)
 - ✅ Token válido por 24 horas
 
-### Usuários
+## Usuários
 - ✅ Criar usuário
 - ✅ Buscar por ID
 - ✅ Listar todos (com e sem paginação)
@@ -35,7 +35,7 @@ API REST completa para gerenciamento de banco digital, desenvolvida com **Spring
 - ✅ Deletar usuário
 - ✅ Validação de CPF e email únicos
 
-### Contas Bancárias
+## Contas Bancárias
 - ✅ Criar conta vinculada a usuário
 - ✅ Buscar por ID
 - ✅ Listar todas (com e sem paginação)
@@ -44,7 +44,7 @@ API REST completa para gerenciamento de banco digital, desenvolvida com **Spring
 - ✅ Deletar conta (apenas com saldo zero)
 - ✅ Saldo automático iniciado em R$ 0,00
 
-### Transações Financeiras
+## Transações Financeiras
 - ✅ Depósito
 - ✅ Saque (com validação de saldo)
 - ✅ Transferência entre contas
@@ -70,28 +70,28 @@ text
 
 ## ⚙️ Pré-requisitos
 
-- **JDK 17** ou superior
-- **PostgreSQL 12+** instalado e rodando
-- **Maven 3.8+**
-- **IntelliJ IDEA** (Community ou Ultimate)
+- JDK 17 ou superior
+- PostgreSQL 12+ instalado e rodando
+- Maven 3.8+
+- IntelliJ IDEA (Community ou Ultimate)
 
 ## 🔧 Configuração e Instalação
 
-### 1. Clone o repositório
+## 1. Clone o repositório
 git clone https://github.com/seu-usuario/banco-digital-api.git
 cd banco-digital-api
 ---
 
-### 2. Configure o banco de dados
+## 2. Configure o banco de dados
 Crie o banco no PostgreSQL:
 CREATE DATABASE banco_digital;
 ---
-### 3. Configure as credenciais
+## 3. Configure as credenciais
 Edite o arquivo `src/main/resources/application-dev.properties`:
 spring.datasource.username=postgres
 spring.datasource.password=SUA_SENHA_AQUI
 ---
-### 4. Execute a aplicação
+## 4. Execute a aplicação
 
 **Pelo Maven:**
 mvn spring-boot:run
@@ -125,7 +125,7 @@ mvn clean test
 
 ## 🔐 Como Usar (Passo a Passo)
 
-### 1. Criar um novo usuário
+## 1. Criar um novo usuário
 POST /api/users
 Content-Type: application/json
 ```json
