@@ -21,13 +21,13 @@ API REST completa para gerenciamento de banco digital, desenvolvida com **Spring
 
 ## 📋 Funcionalidades
 
-## Autenticação
+### Autenticação
 - ✅ Registro de usuários
 - ✅ Login com JWT
 - ✅ Autenticação stateless (sem sessão)
 - ✅ Token válido por 24 horas
 
-## Usuários
+### Usuários
 - ✅ Criar usuário
 - ✅ Buscar por ID
 - ✅ Listar todos (com e sem paginação)
@@ -35,7 +35,7 @@ API REST completa para gerenciamento de banco digital, desenvolvida com **Spring
 - ✅ Deletar usuário
 - ✅ Validação de CPF e email únicos
 
-## Contas Bancárias
+### Contas Bancárias
 - ✅ Criar conta vinculada a usuário
 - ✅ Buscar por ID
 - ✅ Listar todas (com e sem paginação)
@@ -44,7 +44,7 @@ API REST completa para gerenciamento de banco digital, desenvolvida com **Spring
 - ✅ Deletar conta (apenas com saldo zero)
 - ✅ Saldo automático iniciado em R$ 0,00
 
-## Transações Financeiras
+### Transações Financeiras
 - ✅ Depósito
 - ✅ Saque (com validação de saldo)
 - ✅ Transferência entre contas
@@ -73,26 +73,27 @@ com.bancodigital
 - Maven 3.8+
 - IntelliJ IDEA (Community ou Ultimate)
 
-## 🔧 Configuração e Instalação
+### 🔧 Configuração e Instalação
 
-## 1. Clone o repositório
+### 1. Clone o repositório
 - git clone https://github.com/seu-usuario/banco-digital-api.git
 - cd banco-digital-api
 ---
 
-## 2. Configure o banco de dados
+### 2. Configure o banco de dados
 - Crie o banco no PostgreSQL:
 - CREATE DATABASE banco_digital;
 
 ---
 
-## 3. Configure as credenciais
-Edite o arquivo `src/main/resources/application-dev.properties`:
-spring.datasource.username=postgres
-spring.datasource.password=SUA_SENHA_AQUI
+### 3. Configure as credenciais
+- Edite o arquivo `src/main/resources/application-dev.properties`:
+- spring.datasource.username=postgres
+- spring.datasource.password=SUA_SENHA_AQUI
+
 ---
 
-## 4. Execute a aplicação
+### 4. Execute a aplicação
 **Pelo Maven:**
 mvn spring-boot:run
 
@@ -106,11 +107,11 @@ A aplicação estará disponível em: [**http://localhost:8080**](http://localho
 
 ## 📚 Documentação da API (Swagger)
 
-Após executar a aplicação, acesse a documentação interativa:
+- Após executar a aplicação, acesse a documentação interativa:
 
-http://localhost:8080/swagger-ui.html
+- http://localhost:8080/swagger-ui.html
 
-A documentação Swagger permite:
+**A documentação Swagger permite:**
 - Visualizar todos os endpoints
 - Testar as APIs diretamente pelo navegador
 - Ver modelos de request/response
@@ -119,15 +120,14 @@ A documentação Swagger permite:
 ## 🧪 Executar Testes
 
 **Todos os testes:**
-mvn test
+- mvn test
 
 **Com relatório de cobertura:**
 mvn clean test
 
-
 ## 🔐 Como Usar (Passo a Passo)
 
-## 1. Criar um novo usuário
+### 1. Criar um novo usuário
 POST /api/users
 Content-Type: application/json
 ```json
@@ -269,11 +269,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...
 ## 🐳 Docker (Opcional)
 
 ### Criar imagem Docker:
-mvn clean package
-docker build -t banco-digital-api .
+- mvn clean package
+- docker build -t banco-digital-api .
 
 ### Executar com Docker Compose:
-docker-compose up -d
+- docker-compose up -d
 
 ## 📝 Estrutura do Banco de Dados
 
