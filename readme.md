@@ -66,8 +66,6 @@ com.bancodigital
 └── service 
 └── impl
 
-text
-
 ## ⚙️ Pré-requisitos
 
 - JDK 17 ou superior
@@ -78,24 +76,28 @@ text
 ## 🔧 Configuração e Instalação
 
 ## 1. Clone o repositório
-git clone https://github.com/seu-usuario/banco-digital-api.git
-cd banco-digital-api
+- git clone https://github.com/seu-usuario/banco-digital-api.git
+- cd banco-digital-api
 ---
 
 ## 2. Configure o banco de dados
-Crie o banco no PostgreSQL:
-CREATE DATABASE banco_digital;
+- Crie o banco no PostgreSQL:
+- CREATE DATABASE banco_digital;
+
 ---
+
 ## 3. Configure as credenciais
 Edite o arquivo `src/main/resources/application-dev.properties`:
 spring.datasource.username=postgres
 spring.datasource.password=SUA_SENHA_AQUI
 ---
-## 4. Execute a aplicação
 
+## 4. Execute a aplicação
 **Pelo Maven:**
 mvn spring-boot:run
+
 ---
+
 **Pelo IntelliJ:**
 - Clique com botão direito em `BancoDigitalApiApplication.java`
 - Selecione **Run 'BancoDigitalApiApplication'**
