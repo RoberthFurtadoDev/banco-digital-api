@@ -49,3 +49,4 @@ Registro técnico 48 gerado em 04/11/2025 13:04:26
 Registro técnico 49 gerado em 04/11/2025 13:04:26
 Registro técnico 50 gerado em 04/11/2025 13:04:26
 Registro técnico 51 gerado em 04/11/2025 13:04:26
+Registro técnico 52 gerado em 04/11/2025 13:04:26
