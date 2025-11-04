@@ -15,3 +15,4 @@ Registro técnico 14 gerado em 04/11/2025 13:04:22
 Registro técnico 15 gerado em 04/11/2025 13:04:22
 Registro técnico 16 gerado em 04/11/2025 13:04:22
 Registro técnico 17 gerado em 04/11/2025 13:04:22
+Registro técnico 18 gerado em 04/11/2025 13:04:22
