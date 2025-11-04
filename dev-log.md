@@ -33,3 +33,4 @@ Registro técnico 32 gerado em 04/11/2025 13:04:24
 Registro técnico 33 gerado em 04/11/2025 13:04:24
 Registro técnico 34 gerado em 04/11/2025 13:04:24
 Registro técnico 35 gerado em 04/11/2025 13:04:24
+Registro técnico 36 gerado em 04/11/2025 13:04:24
